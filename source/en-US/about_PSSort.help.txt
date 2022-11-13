@@ -1,0 +1,25 @@
+TOPIC
+    about_PSSort
+
+SHORT DESCRIPTION
+    This module contains alternative sort algorithms. The module was created mainly for educational purposes. Work in progress
+
+LONG DESCRIPTION
+    {{ Add Long description here }}
+
+EXAMPLES
+    PS C:\> {{ add examples here }}
+
+NOTE:
+    Thank you to all those who contributed to this module, by writing code, sharing opinions, and provided feedback.
+
+TROUBLESHOOTING NOTE:
+    Look out on the Github repository for issues and new releases.
+
+SEE ALSO
+   - https://github.com/hanpq/PSSort
+
+
+KEYWORDS
+      {{ Add coma separated keywords here }}
+
