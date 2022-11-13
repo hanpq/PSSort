@@ -1,7 +1,7 @@
-BeforeDiscovery {
+﻿BeforeDiscovery {
     $ProjectPath = "$PSScriptRoot\..\..\.." | Convert-Path
     $ProjectName = (Get-ChildItem $ProjectPath\*\*.psd1 | Where-Object {
-        ($_.Directory.Name -eq 'source') -and
+            ($_.Directory.Name -eq 'source') -and
             $(try
                 {
                     Test-ModuleManifest $_.FullName -ErrorAction Stop
@@ -9,17 +9,16 @@ BeforeDiscovery {
                 catch
                 {
                     $false
-                }) }
+                })
+        }
     ).BaseName
 
-    Import-Module $ProjectName
+    Import-Module $ProjectName -Force
 }
 
 InModuleScope $ProjectName {
-    Describe Get-Something {
-        Mock Invoke-GarbageCollect {} -Verifiable
-
-        Context 'default' {
+    Describe 'Test-SortingAlgorithms' {
+        Context 'Default' {
             It 'Should be true' {
                 $true | Should -BeTrue
             }
