@@ -97,9 +97,9 @@
         if ($ReturnDiagnostics)
         {
             return ([pscustomobject]@{
-                    Algorithm   = 'BubblesSort'
+                    Algorithm   = 'QuickSort'
                     ArrayLength = $Unsorted.Count
-                    Passes      = $script:Passes
+                    Passes      = 'N/A'
                     Swaps       = $script:Swaps
                     Compares    = $script:Compares
                     SortedArray = $Unsorted

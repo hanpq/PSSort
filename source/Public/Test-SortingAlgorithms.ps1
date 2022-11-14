@@ -24,7 +24,6 @@
         $List = 1..1000 | Get-Random -Shuffle
 
         $SortAlgorithms = @(
-            'Sort-Object',
             'Use-QuickSort',
             'Use-BubbleSort'
         )
@@ -32,6 +31,19 @@
 
     PROCESS
     {
+        $measure = Measure-Command -Expression {
+            $SortObject = [string[]]$List | Sort-Object
+        }
+        [pscustomobject]@{
+            Algorithm   = 'Built-in sort'
+            ArrayLength = $List.count
+            Passes      = 'Unknown'
+            Swaps       = 'Unknown'
+            Compares    = 'Unknown'
+            Time        = $Measure.TotalMilliseconds
+            Result      = $SortObject
+        }
+
         foreach ($Object in $SortAlgorithms)
         {
             $measure = Measure-Command -Expression {
