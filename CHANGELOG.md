@@ -5,6 +5,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Added parameter ReturnDiagnostic on sort functions. This switch will make the returned object contain information about the sorting operation performed. The sorted array will be included as an parameter of that object.
+
 ## [1.10.3] - 2022-11-13
 
 ### Changed

@@ -35,20 +35,17 @@
         foreach ($Object in $SortAlgorithms)
         {
             $measure = Measure-Command -Expression {
-                $SortedList = Invoke-Expression -Command ('{0} | {1} -Verbose' -f (([string[]]$List) -join ','), $Object )
+                $RetunObject = Invoke-Expression -Command ('{0} | {1} -ReturnDiagnostics' -f (([string[]]$List) -join ','), $Object )
             }
             [pscustomobject]@{
-                Algorithm = $Object
-                Time      = $Measure.TotalMilliseconds
-                Result    = $SortedList
+                Algorithm   = $RetunObject.Algorithm
+                ArrayLength = $RetunObject.ArrayLength
+                Passes      = $RetunObject.Passes
+                Swaps       = $RetunObject.Swaps
+                Compares    = $RetunObject.Compares
+                Time        = $Measure.TotalMilliseconds
+                Result      = $RetunObject.SortedArray
             }
         }
     }
-
-    END
-    {
-
-    }
-
 }
-#endregion

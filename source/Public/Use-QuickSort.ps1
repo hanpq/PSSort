@@ -5,6 +5,8 @@
             This function sorts objects using the quick sort algorithm
         .PARAMETER InputObject
             Defines input objects to sort
+        .PARAMETER ReturnDiagnostics
+            Specifies that instead of returning the sorted array, an object containing sort diagnostic data will be return. The sorted array will stored as an property of that object.
         .EXAMPLE
             Use-QuickSort
 
@@ -15,7 +17,8 @@
     [CmdletBinding()] # Enabled advanced function support
     [OutputType([collections.arraylist])]
     param(
-        [parameter(ValueFromPipeline, Mandatory)]$InputObject
+        [parameter(ValueFromPipeline, Mandatory)]$InputObject,
+        [parameter()][switch]$ReturnDiagnostics
     )
 
     BEGIN
@@ -91,7 +94,21 @@
 
         quicksort -array $Unsorted -low 0 -high ($Unsorted.count - 1)
         Write-Verbose ('QuickSort | Array length: {0} | Passes: N/A | Swaps: {2} | Compares: {3}' -f $Unsorted.count, $script:Passes, $script:swaps, $script:compares)
-        return $Unsorted
+        if ($ReturnDiagnostics)
+        {
+            return ([pscustomobject]@{
+                    Algorithm   = 'BubblesSort'
+                    ArrayLength = $Unsorted.Count
+                    Passes      = $script:Passes
+                    Swaps       = $script:Swaps
+                    Compares    = $script:Compares
+                    SortedArray = $Unsorted
+                })
+        }
+        else
+        {
+            return $Unsorted
+        }
     }
 
 }

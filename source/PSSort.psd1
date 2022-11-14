@@ -11,11 +11,11 @@
     ModuleVersion        = '0.0.1'
     CompatiblePSEditions = @('Desktop', 'Core')
     PowerShellVersion    = '5.1'
-    GUID                 = '3c686cec-c548-47e1-9de6-840e0110615d'
+    GUID                 = '1a7ca65e-3fe2-4f51-a8d5-5d8990fd2d76'
     Author               = 'Hannes Palmquist'
     CompanyName          = 'GetPS'
     Copyright            = '(c) Hannes Palmquist. All rights reserved.'
-    Description          = 'This module contains alternative sort algorithms. The module was created mainly for educational purposes. Work in progress'
+    Description          = 'asd'
     RequiredModules      = @()
     FunctionsToExport    = '*'
     CmdletsToExport      = '*'
@@ -26,12 +26,10 @@
             Prerelease               = ''
             Tags                     = @('PSEdition_Desktop', 'PSEdition_Core', 'Windows', 'Linux', 'MacOS')
             LicenseUri               = 'https://github.com/hanpq/PSSort/blob/main/LICENSE'
-            ProjectUri               = 'https://getps.dev/modules/PSSort/usage_getstarted'
+            ProjectUri               = 'https://getps.dev/modules/PSSort/getstarted'
             IconUri                  = ''
             ReleaseNotes             = ''
             RequireLicenseAcceptance = $false
         }
     }
 }
-
-

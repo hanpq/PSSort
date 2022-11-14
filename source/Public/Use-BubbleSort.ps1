@@ -6,14 +6,17 @@
             bubblesort where already sorted items are skipped every pass.
         .PARAMETER InputObject
             Specify array of items to be sorted
+        .PARAMETER ReturnDiagnostics
+            Specifies that instead of returning the sorted array, an object containing sort diagnostic data will be return. The sorted array will stored as an property of that object.
         .EXAMPLE
             3,2,1 | Use-BubbleSort
     #>
     [Diagnostics.CodeAnalysis.SuppressMessageAttribute('PSUseApprovedVerbs', '', Justification = 'Purpose of function is to mimic Sort-Object, therefor the verb sort is used')]
-    [CmdletBinding()] # Enabled advanced function support
+    [CmdletBinding()]
     [OutputType([collections.arraylist])]
     param(
-        [parameter(ValueFromPipeline, Mandatory)]$InputObject
+        [parameter(ValueFromPipeline, Mandatory)]$InputObject,
+        [parameter()][switch]$ReturnDiagnostics
     )
 
     BEGIN
@@ -82,7 +85,21 @@
 
         bubblesort -array $Unsorted
         Write-Verbose ('BubbleSort | Array length: {0} | Passes: {1} | Swaps: {2} | Compares: {3}' -f $Unsorted.count, $script:Passes, $script:swaps, $script:compares)
-        return $Unsorted
+        if ($ReturnDiagnostics)
+        {
+            return ([pscustomobject]@{
+                    Algorithm   = 'BubblesSort'
+                    ArrayLength = $Unsorted.Count
+                    Passes      = $script:Passes
+                    Swaps       = $script:Swaps
+                    Compares    = $script:Compares
+                    SortedArray = $Unsorted
+                })
+        }
+        else
+        {
+            return $Unsorted
+        }
     }
 
 }
