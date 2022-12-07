@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.12.1] - 2022-11-14
+
 ### Fixed
 
 - Fixed an issue where test-sortingalgorithms called Sort-Object with the parameter ReturnDiagnostic which is exclusive to the module provided functions.
