@@ -25,7 +25,8 @@
 
         $SortAlgorithms = @(
             'Use-QuickSort',
-            'Use-BubbleSort'
+            'Use-BubbleSort',
+            'Use-SelectionSort'
         )
     }
 
