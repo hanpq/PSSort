@@ -1,6 +1,9 @@
-BeforeDiscovery {
-        $RootItem = Get-Item $PSScriptRoot
-    while ($RootItem.GetDirectories().Name -notcontains "source") {$RootItem = $RootItem.Parent}
+﻿BeforeDiscovery {
+    $RootItem = Get-Item $PSScriptRoot
+    while ($RootItem.GetDirectories().Name -notcontains 'source')
+    {
+        $RootItem = $RootItem.Parent
+    }
     $ProjectPath = $RootItem.FullName
     $ProjectName = (Get-ChildItem $ProjectPath\*\*.psd1 | Where-Object {
             ($_.Directory.Name -eq 'source') -and
@@ -19,11 +22,12 @@ BeforeDiscovery {
 }
 
 InModuleScope $ProjectName {
-    Describe 'Use-QuickSort' {
-        Context 'Default' {
-            It 'Should be true' {
-                $true | Should -BeTrue
-            }
-        }
+    Describe 'Test-SortingAlgorithms' {
     }
+
+    Describe 'Use-BubbleSort' {}
+
+    Describe 'Use-QuickSort' {}
+
+    Describe 'Use-SelectionSort' {}
 }
