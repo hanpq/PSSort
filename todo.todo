@@ -2,39 +2,39 @@
 
 ✔ Selection Sort @done(22-12-15 22:09)
 ✔ Bubble Sort @done(22-12-15 22:09)
-☐ Recursive Bubble Sort
-☐ Insertion Sort
-☐ Recursive Insertion Sort
-☐ Merge Sort
-☐ Iterative Merge Sort
+✔ Recursive Bubble Sort @done(26-09-04 00:00)
+✔ Insertion Sort @done(26-09-04 00:00)
+✔ Recursive Insertion Sort @done(26-09-04 00:00)
+✔ Merge Sort @done(26-09-04 00:00)
+✔ Iterative Merge Sort @done(26-09-04 00:00)
 ✔ Quick Sort @done(22-12-15 22:09)
-☐ Iterative Quick Sort
-☐ Heap Sort
-☐ Counting Sort
-☐ Radix Sort
-☐ Bucket Sort
-☐ ShellSort
+✔ Iterative Quick Sort @done(26-09-04 00:00)
+✔ Heap Sort @done(26-09-04 00:00)
+✔ Counting Sort @done(26-09-04 00:00)
+✔ Radix Sort @done(26-09-04 00:00)
+✔ Bucket Sort @done(26-09-04 00:00)
+✔ ShellSort @done(26-09-04 00:00)
 ☐ TimSort
-☐ Comb Sort
-☐ Pigeonhole Sort
-☐ Cycle Sort
-☐ Cocktail Sort
+✔ Comb Sort @done(26-09-04 00:00)
+✔ Pigeonhole Sort @done(26-09-04 00:00)
+✔ Cycle Sort @done(26-09-04 00:00)
+✔ Cocktail Sort @done(26-09-04 00:00)
 ☐ Strand Sort
 ☐ Bitonic Sort
-☐ Pancake sorting
-☐ Binary Insertion Sort
+✔ Pancake sorting @done(26-09-04 00:00)
+✔ Binary Insertion Sort @done(26-09-04 00:00)
 ☐ BogoSort or Permutation Sort
-☐ Gnome Sort
+✔ Gnome Sort @done(26-09-04 00:00)
 ☐ Sleep Sort – The King of Laziness / Sorting while Sleeping
 ☐ Structure Sorting (By Multiple Rules) in C++
-☐ Stooge Sort
+✔ Stooge Sort @done(26-09-04 00:00)
 ☐ Tag Sort (To get both sorted and original)
 ☐ Tree Sort
 ☐ Cartesian Tree Sorting
-☐ Odd-Even Sort / Brick Sort
+✔ Odd-Even Sort / Brick Sort @done(26-09-04 00:00)
 ☐ QuickSort on Singly Linked List
 ☐ QuickSort on Doubly Linked List
-☐ 3-Way QuickSort (Dutch National Flag)
+✔ 3-Way QuickSort (Dutch National Flag) @done(26-09-04 00:00)
 ☐ Merge Sort for Linked Lists
 ☐ Merge Sort for Doubly Linked List
 ☐ 3-way Merge Sort

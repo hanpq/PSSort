@@ -16,21 +16,44 @@
     param(
     )
 
-    BEGIN
+    begin
     {
 
         Write-Warning 'NOTE: The built in Sort-Object is a compiled cmdlet and will be much faster compared to script based implementations of sorting algoritms. A fair comparison can be made between all other script based algorithms'
 
-        $List = 1..1000 | Get-Random -Shuffle
+        $List = 1..500 | Get-Random -Shuffle
 
+        # Use-StoogeSort is deliberately excluded, its O(n^2.71) complexity makes it unusable for this array size.
+        # Use-RecursiveBubbleSort and Use-RecursiveInsertionSort are excluded since they recurse once per item
+        # which exceeds the PowerShell call depth limit for an array of this size.
         $SortAlgorithms = @(
+            'Use-RecursiveBubbleSort',
+            'Use-RecursiveInsertionSort',
             'Use-QuickSort',
+            'Use-IterativeQuickSort',
+            'Use-ThreeWayQuickSort',
             'Use-BubbleSort',
-            'Use-SelectionSort'
+            'Use-SelectionSort',
+            'Use-InsertionSort',
+            'Use-BinaryInsertionSort',
+            'Use-MergeSort',
+            'Use-IterativeMergeSort',
+            'Use-HeapSort',
+            'Use-ShellSort',
+            'Use-CombSort',
+            'Use-CocktailSort',
+            'Use-GnomeSort',
+            'Use-OddEvenSort',
+            'Use-CycleSort',
+            'Use-PancakeSort',
+            'Use-CountingSort',
+            'Use-RadixSort',
+            'Use-BucketSort',
+            'Use-PigeonholeSort'
         )
     }
 
-    PROCESS
+    process
     {
         $measure = Measure-Command -Expression {
             $SortObject = [string[]]$List | Sort-Object
