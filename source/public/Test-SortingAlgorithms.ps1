@@ -21,7 +21,7 @@
 
         Write-Warning 'NOTE: The built in Sort-Object is a compiled cmdlet and will be much faster compared to script based implementations of sorting algoritms. A fair comparison can be made between all other script based algorithms'
 
-        $List = 1..500 | Get-Random -Shuffle
+        $List = 1..500 | Get-Random -Count 500
 
         # Use-StoogeSort is deliberately excluded, its O(n^2.71) complexity makes it unusable for this array size.
         # Use-RecursiveBubbleSort and Use-RecursiveInsertionSort are excluded since they recurse once per item
