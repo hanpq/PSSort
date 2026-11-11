@@ -3,6 +3,14 @@
 The format is based on and uses the types of changes according to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.14.2-beta001](https://github.com/hanpq/PSSort/compare/v1.14.1-beta001...v1.14.2-beta001) (2026-11-11)
+
+
+### Bug Fixes
+
+* release ([fb58abb](https://github.com/hanpq/PSSort/commit/fb58abb75a2b441acd6c619bbf53edd60c74d0bb))
+* release 1.14.2-beta001 ([11b5f4a](https://github.com/hanpq/PSSort/commit/11b5f4afe0316b5a5a10d932f81beb45d3c2aea6))
+
 ## [1.14.1-beta001](https://github.com/hanpq/PSSort/compare/v1.14.0...v1.14.1-beta001) (2026-11-11)
 
 
