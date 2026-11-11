@@ -3,6 +3,13 @@
 The format is based on and uses the types of changes according to [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.14.1-beta001](https://github.com/hanpq/PSSort/compare/v1.14.0...v1.14.1-beta001) (2026-11-11)
+
+
+### Bug Fixes
+
+* update BUILDING.md and test suite for sorting algorithms ([46e877a](https://github.com/hanpq/PSSort/commit/46e877a9f4a7c37a132974473afbd13f65a88d13))
+
 ## [Unreleased]
 
 ### Added
