@@ -8,7 +8,7 @@
 
 @{
     RootModule           = 'PSSort.psm1'
-    ModuleVersion        = '0.0.1'
+    ModuleVersion        = '1.14.0'
     CompatiblePSEditions = @('Desktop', 'Core')
     PowerShellVersion    = '5.1'
     GUID                 = '1a7ca65e-3fe2-4f51-a8d5-5d8990fd2d76'
