@@ -9,3 +9,5 @@ if (-not (Test-Path -LiteralPath $moduleManifest))
 Import-Module $moduleManifest -Force
 
 # Add manual test scenarios for PSSort here.
+
+Test-SortingAlgorithms -ListSize 500 | Sort-Object time | Format-Table
