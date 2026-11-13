@@ -148,6 +148,8 @@ BeforeDiscovery {
 Describe 'Use-BinaryInsertionSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-BinaryInsertionSort' } -Fixture $sortingTests
 Describe 'Use-BubbleSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-BubbleSort' } -Fixture $sortingTests
 Describe 'Use-BucketSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-BucketSort' } -Fixture $sortingTests
+Describe 'Use-BitonicSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-BitonicSort' } -Fixture $sortingTests
+Describe 'Use-CartesianTreeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-CartesianTreeSort' } -Fixture $sortingTests
 Describe 'Use-CocktailSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-CocktailSort' } -Fixture $sortingTests
 Describe 'Use-CombSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-CombSort' } -Fixture $sortingTests
 Describe 'Use-CountingSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-CountingSort' } -Fixture $sortingTests
@@ -155,6 +157,8 @@ Describe 'Use-CycleSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-CycleSort' }
 Describe 'Use-GnomeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-GnomeSort' } -Fixture $sortingTests
 Describe 'Use-HeapSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-HeapSort' } -Fixture $sortingTests
 Describe 'Use-InsertionSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-InsertionSort' } -Fixture $sortingTests
+Describe 'Use-MergeSortDoublyLinkedList' -Tag 'Unit' -ForEach @{ CommandName = 'Use-MergeSortDoublyLinkedList' } -Fixture $sortingTests
+Describe 'Use-MergeSortSinglyLinkedList' -Tag 'Unit' -ForEach @{ CommandName = 'Use-MergeSortSinglyLinkedList' } -Fixture $sortingTests
 Describe 'Use-IterativeMergeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-IterativeMergeSort' } -Fixture $sortingTests
 Describe 'Use-IterativeQuickSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-IterativeQuickSort' } -Fixture $sortingTests
 Describe 'Use-MergeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-MergeSort' } -Fixture $sortingTests
@@ -167,8 +171,15 @@ Describe 'Use-RecursiveBubbleSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-Re
 Describe 'Use-RecursiveInsertionSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-RecursiveInsertionSort' } -Fixture $sortingTests
 Describe 'Use-SelectionSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-SelectionSort' } -Fixture $sortingTests
 Describe 'Use-ShellSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-ShellSort' } -Fixture $sortingTests
+Describe 'Use-StrandSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-StrandSort' } -Fixture $sortingTests
 Describe 'Use-StoogeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-StoogeSort' } -Fixture $sortingTests
+Describe 'Use-TagSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-TagSort' } -Fixture $sortingTests
+Describe 'Use-TimSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-TimSort' } -Fixture $sortingTests
+Describe 'Use-TreeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-TreeSort' } -Fixture $sortingTests
+Describe 'Use-ThreeWayMergeSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-ThreeWayMergeSort' } -Fixture $sortingTests
 Describe 'Use-ThreeWayQuickSort' -Tag 'Unit' -ForEach @{ CommandName = 'Use-ThreeWayQuickSort' } -Fixture $sortingTests
+Describe 'Use-QuickSortDoublyLinkedList' -Tag 'Unit' -ForEach @{ CommandName = 'Use-QuickSortDoublyLinkedList' } -Fixture $sortingTests
+Describe 'Use-QuickSortSinglyLinkedList' -Tag 'Unit' -ForEach @{ CommandName = 'Use-QuickSortSinglyLinkedList' } -Fixture $sortingTests
 
 Describe 'Test-SortingAlgorithms' -Tag 'Unit' {
     BeforeAll {
@@ -186,10 +197,12 @@ Describe 'Test-SortingAlgorithms' -Tag 'Unit' {
 
         $warnings.Count | Should -Be 1
         $warnings[0].Message | Should -Match 'Sort-Object'
-        $results.Count | Should -Be 24
-        @($results.Algorithm | Select-Object -Unique).Count | Should -Be 24
+        $results.Count | Should -Be 33
+        @($results.Algorithm | Select-Object -Unique).Count | Should -Be 33
         $results[0].Algorithm | Should -BeExactly 'Built-in sort'
         $results.Algorithm | Should -Not -Contain 'StoogeSort'
+        $results.Algorithm | Should -Not -Contain 'RecursiveBubbleSort'
+        $results.Algorithm | Should -Not -Contain 'RecursiveInsertionSort'
         foreach ($result in $results)
         {
             @($result.PSObject.Properties.Name) | Should -Be @(
@@ -199,6 +212,6 @@ Describe 'Test-SortingAlgorithms' -Tag 'Unit' {
             @($result.Result) | Should -Be @(1, 2, 3)
             $result.Time | Should -BeGreaterOrEqual 0
         }
-        Should -Invoke Get-Random -ModuleName $ProjectName -Exactly 500 -Scope It -ParameterFilter { $Count -eq 500 }
+        Should -Invoke Get-Random -ModuleName $ProjectName -Exactly 1000 -Scope It -ParameterFilter { $Count -eq 1000 }
     }
 }

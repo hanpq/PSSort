@@ -43,6 +43,17 @@ InModuleScope $ProjectName {
             }
         }
     }
+    Describe 'Invoke-LinkedListSort' {
+        It 'sorts linked-list values and returns diagnostics' {
+            $inputList = [collections.arraylist]::new()
+            foreach ($value in @(3, 1, 2, 1)) { $null = $inputList.Add($value) }
+
+            $result = Invoke-LinkedListSort -InputList $inputList -Algorithm Merge -DoublyLinked $true -ReturnDiagnostics
+
+            @($result.SortedArray) | Should -Be @(1, 1, 2, 3)
+            $result.Algorithm | Should -BeExactly 'MergeSortDoublyLinkedList'
+        }
+    }
     Describe 'pslog' {
         BeforeAll {
             Mock -CommandName Get-Date -MockWith { [datetime]'2000-01-01 01:00:00+00:00' }

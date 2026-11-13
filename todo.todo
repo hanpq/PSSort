@@ -14,28 +14,28 @@
 ✔ Radix Sort @done(26-09-04 00:00)
 ✔ Bucket Sort @done(26-09-04 00:00)
 ✔ ShellSort @done(26-09-04 00:00)
-☐ TimSort
+✔ TimSort @done(26-11-13 16:29)
 ✔ Comb Sort @done(26-09-04 00:00)
 ✔ Pigeonhole Sort @done(26-09-04 00:00)
 ✔ Cycle Sort @done(26-09-04 00:00)
 ✔ Cocktail Sort @done(26-09-04 00:00)
-☐ Strand Sort
-☐ Bitonic Sort
+✔ Strand Sort @done(26-11-13 16:29)
+✔ Bitonic Sort @done(26-11-13 16:29)
 ✔ Pancake sorting @done(26-09-04 00:00)
 ✔ Binary Insertion Sort @done(26-09-04 00:00)
-☐ BogoSort or Permutation Sort
+☐ BogoSort or Permutation Sort (not implemented: unbounded runtime is unsuitable for a general-purpose sorting command)
 ✔ Gnome Sort @done(26-09-04 00:00)
-☐ Sleep Sort – The King of Laziness / Sorting while Sleeping
-☐ Structure Sorting (By Multiple Rules) in C++
+☐ Sleep Sort – The King of Laziness / Sorting while Sleeping (not implemented: timing-based output is nondeterministic and unreliable)
+☐ Structure Sorting (By Multiple Rules) in C++ (not implemented: C++ struct-specific example is not applicable to this PowerShell module)
 ✔ Stooge Sort @done(26-09-04 00:00)
-☐ Tag Sort (To get both sorted and original)
-☐ Tree Sort
-☐ Cartesian Tree Sorting
+✔ Tag Sort (To get both sorted and original) @done(26-11-13 16:29)
+✔ Tree Sort @done(26-11-13 16:29)
+✔ Cartesian Tree Sorting @done(26-11-13 16:29)
 ✔ Odd-Even Sort / Brick Sort @done(26-09-04 00:00)
-☐ QuickSort on Singly Linked List
-☐ QuickSort on Doubly Linked List
+✔ QuickSort on Singly Linked List @done(26-11-13 16:29)
+✔ QuickSort on Doubly Linked List @done(26-11-13 16:29)
 ✔ 3-Way QuickSort (Dutch National Flag) @done(26-09-04 00:00)
-☐ Merge Sort for Linked Lists
-☐ Merge Sort for Doubly Linked List
-☐ 3-way Merge Sort
+✔ Merge Sort for Linked Lists @done(26-11-13 16:29)
+✔ Merge Sort for Doubly Linked List @done(26-11-13 16:29)
+✔ 3-way Merge Sort @done(26-11-13 16:29)
 ☐

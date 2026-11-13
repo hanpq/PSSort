@@ -32,7 +32,7 @@ Untagged builds use the `## [Unreleased]` changelog section for release notes. T
 
 The QA suite in `tests/QA/module.tests.ps1` reports each file-quality check separately. It discovers source files and reads unit-test files once per run, and parses each function file once in its context's `BeforeAll`. Keep these shared inputs read-only so individual checks remain independent.
 
-The public unit suite exercises all 24 sorting algorithms with shared behavioral cases for pipeline and direct input, duplicates, ordered and reversed data, single items, and diagnostics. Algorithm-specific cases cover supported numeric and string inputs, radix validation, and bucket counts. The demo uses a mocked three-item sample to keep its test deterministic and bounded. These tests measure actual module coverage without weakening the QA checks.
+The public unit suite exercises all 35 sorting algorithms with shared behavioral cases for pipeline and direct input, duplicates, ordered and reversed data, single items, and diagnostics. Algorithm-specific cases cover supported numeric and string inputs, radix validation, and bucket counts. The demo uses a mocked three-item sample to keep its test deterministic and bounded. These tests measure actual module coverage without weakening the QA checks.
 
 Stable-promotion tests mock Git and the GitHub API. They use temporary release-metadata files without initializing repositories or creating commits and tags; these are unit tests, not Git integration tests.
 
