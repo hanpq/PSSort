@@ -25,7 +25,7 @@
 ✔ Binary Insertion Sort @done(26-09-04 00:00)
 ☐ BogoSort or Permutation Sort (not implemented: unbounded runtime is unsuitable for a general-purpose sorting command)
 ✔ Gnome Sort @done(26-09-04 00:00)
-☐ Sleep Sort – The King of Laziness / Sorting while Sleeping (not implemented: timing-based output is nondeterministic and unreliable)
+☐ Sleep Sort - The King of Laziness / Sorting while Sleeping (not implemented: timing-based output is nondeterministic and unreliable)
 ☐ Structure Sorting (By Multiple Rules) in C++ (not implemented: C++ struct-specific example is not applicable to this PowerShell module)
 ✔ Stooge Sort @done(26-09-04 00:00)
 ✔ Tag Sort (To get both sorted and original) @done(26-11-13 16:29)
